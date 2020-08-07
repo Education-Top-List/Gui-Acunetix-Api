@@ -80,7 +80,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
               <object class="GtkMenuItem" id="dl_report_pdf">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">PDF格式</property>
+                <property name="label" translatable="yes">PDF format</property>
                 <property name="use_underline">True</property>
                 <signal name="activate" handler="on_dl_report_pdf_activate" swapped="no"/>
               </object>
@@ -154,7 +154,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
       <object class="GtkMenuItem" id="refresh_task">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">刷新任务</property>
+        <property name="label" translatable="yes">Refresh task</property>
         <property name="use_underline">True</property>
         <signal name="activate" handler="on_refresh_task_activate" swapped="no"/>
       </object>
@@ -163,7 +163,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
       <object class="GtkMenuItem" id="del_task">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">删除任务</property>
+        <property name="label" translatable="yes">Delete task</property>
         <property name="use_underline">True</property>
       </object>
     </child>
@@ -176,7 +176,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
       <object class="GtkMenuItem" id="open_with_browser">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">浏览器打开</property>
+        <property name="label" translatable="yes">Browser opens</property>
         <property name="use_underline">True</property>
         <signal name="activate" handler="on_open_with_browser_activate" swapped="no"/>
       </object>
@@ -185,7 +185,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
       <object class="GtkMenuItem" id="copy_requests">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">复制请求</property>
+        <property name="label" translatable="yes">Copy request</property>
         <property name="use_underline">True</property>
         <signal name="activate" handler="on_copy_requests_activate" swapped="no"/>
       </object>
@@ -194,7 +194,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
       <object class="GtkMenuItem" id="send_to_sqlmap">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="label" translatable="yes">发送到sqlmap</property>
+        <property name="label" translatable="yes">Send to sqlmap</property>
         <property name="use_underline">True</property>
         <signal name="activate" handler="on_send_to_sqlmap_activate" swapped="no"/>
       </object>
@@ -253,41 +253,41 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
   </object>
   <object class="GtkListStore" id="list_store_reports">
     <columns>
-      <!-- column-name 目标 -->
+      <!-- column-name aims -->
       <column type="gchararray"/>
-      <!-- column-name 报告ID -->
+      <!-- column-name Report ID -->
       <column type="gchararray"/>
-      <!-- column-name 状态 -->
+      <!-- column-name status -->
       <column type="gchararray"/>
-      <!-- column-name 列表ID -->
+      <!-- column-name List ID -->
       <column type="gchararray"/>
-      <!-- column-name 生成时间 -->
+      <!-- column-name Build time -->
       <column type="gchararray"/>
-      <!-- column-name 模板类型 -->
+      <!-- column-name Template type -->
       <column type="gchararray"/>
-      <!-- column-name 描述 -->
+      <!-- column-name description -->
       <column type="gchararray"/>
-      <!-- column-name 下载地址 -->
+      <!-- column-name download link -->
       <column type="gchararray"/>
     </columns>
   </object>
   <object class="GtkListStore" id="list_store_sql_injection">
     <columns>
-      <!-- column-name 节点服务器 -->
+      <!-- column-name Node server -->
       <column type="gchararray"/>
-      <!-- column-name 任务ID -->
+      <!-- column-name Task ID -->
       <column type="gchararray"/>
-      <!-- column-name 状态 -->
+      <!-- column-name status -->
       <column type="gchararray"/>
       <!-- column-name URL -->
       <column type="gchararray"/>
       <!-- column-name Data -->
       <column type="gchararray"/>
-      <!-- column-name 数据库类型 -->
+      <!-- column-name Database type -->
       <column type="gchararray"/>
-      <!-- column-name 数据库版本 -->
+      <!-- column-name Database version -->
       <column type="gchararray"/>
-      <!-- column-name 注入类型 -->
+      <!-- column-name Injection type -->
       <column type="gchararray"/>
       <!-- column-name Payload -->
       <column type="gchararray"/>
@@ -295,45 +295,45 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
   </object>
   <object class="GtkListStore" id="list_store_target">
     <columns>
-      <!-- column-name 目标 -->
+      <!-- column-name aims -->
       <column type="gchararray"/>
-      <!-- column-name 目标ID -->
+      <!-- column-name Target ID -->
       <column type="gchararray"/>
-      <!-- column-name 状态 -->
+      <!-- column-name status -->
       <column type="gchararray"/>
-      <!-- column-name 扫描ID -->
+      <!-- column-name Scan ID -->
       <column type="gchararray"/>
-      <!-- column-name 高 -->
+      <!-- column-name high -->
       <column type="gint"/>
-      <!-- column-name 中 -->
+      <!-- column-name in -->
       <column type="gint"/>
-      <!-- column-name 低 -->
+      <!-- column-name low -->
       <column type="gint"/>
-      <!-- column-name 信息 -->
+      <!-- column-name information -->
       <column type="gint"/>
-      <!-- column-name 时间 -->
+      <!-- column-name time -->
       <column type="gchararray"/>
-      <!-- column-name 扫描类型 -->
+      <!-- column-name Scan type -->
       <column type="gchararray"/>
-      <!-- column-name 描述 -->
+      <!-- column-name description -->
       <column type="gchararray"/>
-      <!-- column-name 扫描会话 -->
+      <!-- column-name Scan session -->
       <column type="gchararray"/>
     </columns>
   </object>
   <object class="GtkListStore" id="list_store_vulnerabilities_info">
     <columns>
-      <!-- column-name 漏洞类型 -->
+      <!-- column-name Vulnerability type -->
       <column type="gchararray"/>
-      <!-- column-name 漏洞名称 -->
+      <!-- column-name Vulnerability name -->
       <column type="gchararray"/>
       <!-- column-name URL -->
       <column type="gchararray"/>
-      <!-- column-name 请求 -->
+      <!-- column-name request -->
       <column type="gchararray"/>
-      <!-- column-name 参数 -->
+      <!-- column-name parameter -->
       <column type="gchararray"/>
-      <!-- column-name 详情 -->
+      <!-- column-name Details -->
       <column type="gchararray"/>
       <!-- column-name Original -->
       <column type="gchararray"/>
@@ -420,7 +420,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
           <object class="GtkMenuItem">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">编辑(_E)</property>
+            <property name="label" translatable="yes">edit(_E)</property>
             <property name="use_underline">True</property>
             <child type="submenu">
               <object class="GtkMenu">
@@ -470,7 +470,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
           <object class="GtkMenuItem">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">帮助(_H)</property>
+            <property name="label" translatable="yes">help(_H)</property>
             <property name="use_underline">True</property>
             <child type="submenu">
               <object class="GtkMenu">
@@ -534,7 +534,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                                 <property name="can_focus">False</property>
                                 <property name="halign">start</property>
                                 <property name="valign">start</property>
-                                <property name="label" translatable="yes">目标：</property>
+                                <property name="label" translatable="yes">aims：</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -565,7 +565,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                           <object class="GtkLabel" id="label_drop_file">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">把文件拖放到这里</property>
+                            <property name="label" translatable="yes">Drag and drop files here</property>
                             <signal name="drag-data-received" handler="on_label_drop_file_drag_data_received" swapped="no"/>
                           </object>
                           <packing>
@@ -622,7 +622,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                             <property name="valign">start</property>
                             <child>
                               <object class="GtkButton" id="Button_Single_Scan">
-                                <property name="label" translatable="yes">单个扫描</property>
+                                <property name="label" translatable="yes">Single scan</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
@@ -643,7 +643,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                                 <property name="can_focus">False</property>
                                 <property name="halign">start</property>
                                 <property name="valign">start</property>
-                                <property name="label" translatable="yes">描述：</property>
+                                <property name="label" translatable="yes">description：</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -675,7 +675,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                             <property name="can_focus">False</property>
                             <child>
                               <object class="GtkButton" id="Button_Batch_Scan">
-                                <property name="label" translatable="yes">批量扫描</property>
+                                <property name="label" translatable="yes">Batch scan</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
@@ -689,7 +689,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                             </child>
                             <child>
                               <object class="GtkButton" id="batch_del">
-                                <property name="label" translatable="yes">批量删除</property>
+                                <property name="label" translatable="yes">batch deletion</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
@@ -703,7 +703,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                             </child>
                             <child>
                               <object class="GtkButton" id="Button_Clear_List">
-                                <property name="label" translatable="yes">清空列表</property>
+                                <property name="label" translatable="yes">clear the list</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
@@ -750,7 +750,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                                     <child>
                                       <object class="GtkTreeViewColumn">
                                         <property name="resizable">True</property>
-                                        <property name="title" translatable="yes">目标</property>
+                                        <property name="title" translatable="yes">aims</property>
                                       </object>
                                     </child>
                                     <child>
@@ -758,39 +758,39 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                                         <property name="resizable">True</property>
                                         <property name="sizing">fixed</property>
                                         <property name="fixed_width">50</property>
-                                        <property name="title" translatable="yes">目标ID</property>
+                                        <property name="title" translatable="yes">Target ID</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">状态</property>
+                                        <property name="title" translatable="yes">status</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
                                         <property name="sizing">fixed</property>
                                         <property name="fixed_width">50</property>
-                                        <property name="title" translatable="yes">扫描ID</property>
+                                        <property name="title" translatable="yes">Scan ID</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">高</property>
+                                        <property name="title" translatable="yes">high</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">中</property>
+                                        <property name="title" translatable="yes">Nomal</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">低</property>
+                                        <property name="title" translatable="yes">low</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">信息</property>
+                                        <property name="title" translatable="yes">information</property>
                                       </object>
                                     </child>
                                     <child>
@@ -798,25 +798,25 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                                         <property name="resizable">True</property>
                                         <property name="sizing">fixed</property>
                                         <property name="fixed_width">50</property>
-                                        <property name="title" translatable="yes">时间</property>
+                                        <property name="title" translatable="yes">time</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
                                         <property name="resizable">True</property>
-                                        <property name="title" translatable="yes">扫描类型</property>
+                                        <property name="title" translatable="yes">Scan type</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">描述</property>
+                                        <property name="title" translatable="yes">description</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
                                         <property name="sizing">fixed</property>
                                         <property name="fixed_width">50</property>
-                                        <property name="title" translatable="yes">扫描会话</property>
+                                        <property name="title" translatable="yes">Scan session</property>
                                       </object>
                                     </child>
                                   </object>
@@ -846,48 +846,48 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">目标</property>
+                                        <property name="title" translatable="yes">aims</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
                                         <property name="sizing">fixed</property>
                                         <property name="fixed_width">50</property>
-                                        <property name="title" translatable="yes">报告ID</property>
+                                        <property name="title" translatable="yes">Report ID</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">状态</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkTreeViewColumn">
-                                        <property name="sizing">fixed</property>
-                                        <property name="fixed_width">50</property>
-                                        <property name="title" translatable="yes">列表ID</property>
+                                        <property name="title" translatable="yes">status</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
                                         <property name="sizing">fixed</property>
                                         <property name="fixed_width">50</property>
-                                        <property name="title" translatable="yes">生成时间</property>
+                                        <property name="title" translatable="yes">List ID</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">模板类型</property>
+                                        <property name="sizing">fixed</property>
+                                        <property name="fixed_width">50</property>
+                                        <property name="title" translatable="yes">Build time</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">描述</property>
+                                        <property name="title" translatable="yes">Template type</property>
                                       </object>
                                     </child>
                                     <child>
                                       <object class="GtkTreeViewColumn">
-                                        <property name="title" translatable="yes">下载地址</property>
+                                        <property name="title" translatable="yes">description</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkTreeViewColumn">
+                                        <property name="title" translatable="yes">download link</property>
                                       </object>
                                     </child>
                                   </object>
@@ -972,7 +972,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                                       <object class="GtkLabel">
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
-                                        <property name="label" translatable="yes">分割符：</property>
+                                        <property name="label" translatable="yes">Delimiter：</property>
                                       </object>
                                       <packing>
                                         <property name="left_attach">0</property>
@@ -1180,7 +1180,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                 <property name="halign">start</property>
                 <child>
                   <object class="GtkButton" id="high_vulnerabilities">
-                    <property name="label" translatable="yes">高危</property>
+                    <property name="label" translatable="yes">High risk</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1194,7 +1194,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                 </child>
                 <child>
                   <object class="GtkButton" id="medium_vulnerabilities">
-                    <property name="label" translatable="yes">中危</property>
+                    <property name="label" translatable="yes">medium</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1208,7 +1208,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                 </child>
                 <child>
                   <object class="GtkButton" id="low_vulnerabilities">
-                    <property name="label" translatable="yes">低危</property>
+                    <property name="label" translatable="yes">Low risk</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1222,7 +1222,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                 </child>
                 <child>
                   <object class="GtkButton" id="info_vulnerabilities">
-                    <property name="label" translatable="yes">信息</property>
+                    <property name="label" translatable="yes">information</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1250,7 +1250,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                 </child>
                 <child>
                   <object class="GtkButton">
-                    <property name="label" translatable="yes">搜索</property>
+                    <property name="label" translatable="yes">search for</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1263,7 +1263,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                 </child>
                 <child>
                   <object class="GtkButton" id="verify_sql_injection">
-                    <property name="label" translatable="yes">验证SQL注入</property>
+                    <property name="label" translatable="yes">Verify SQL injection</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1320,14 +1320,14 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                         <child>
                           <object class="GtkTreeViewColumn">
                             <property name="fixed_width">100</property>
-                            <property name="title" translatable="yes">漏洞类型</property>
+                            <property name="title" translatable="yes">Vulnerability type</property>
                           </object>
                         </child>
                         <child>
                           <object class="GtkTreeViewColumn">
                             <property name="sizing">fixed</property>
                             <property name="fixed_width">80</property>
-                            <property name="title" translatable="yes">漏洞名称</property>
+                            <property name="title" translatable="yes">Vulnerability name</property>
                           </object>
                         </child>
                         <child>
@@ -1343,14 +1343,14 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                             <property name="resizable">True</property>
                             <property name="sizing">fixed</property>
                             <property name="fixed_width">400</property>
-                            <property name="title" translatable="yes">请求</property>
+                            <property name="title" translatable="yes">request</property>
                           </object>
                         </child>
                         <child>
                           <object class="GtkTreeViewColumn">
                             <property name="sizing">fixed</property>
                             <property name="fixed_width">50</property>
-                            <property name="title" translatable="yes">参数</property>
+                            <property name="title" translatable="yes">parameter</property>
                           </object>
                         </child>
                         <child>
@@ -1409,7 +1409,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                 <property name="can_focus">False</property>
                 <child>
                   <object class="GtkButton" id="del_empty_task">
-                    <property name="label" translatable="yes">删除空的任务</property>
+                    <property name="label" translatable="yes">Delete empty tasks</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1423,7 +1423,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                 </child>
                 <child>
                   <object class="GtkButton" id="save_report">
-                    <property name="label" translatable="yes">导出报告</property>
+                    <property name="label" translatable="yes">Export report</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1466,17 +1466,17 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                     </child>
                     <child>
                       <object class="GtkTreeViewColumn">
-                        <property name="title" translatable="yes">节点服务器</property>
+                        <property name="title" translatable="yes">Node server</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkTreeViewColumn">
-                        <property name="title" translatable="yes">任务ID</property>
+                        <property name="title" translatable="yes">Task ID</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkTreeViewColumn">
-                        <property name="title" translatable="yes">状态</property>
+                        <property name="title" translatable="yes">status</property>
                       </object>
                     </child>
                     <child>
@@ -1494,12 +1494,12 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                     </child>
                     <child>
                       <object class="GtkTreeViewColumn">
-                        <property name="title" translatable="yes">数据库类型</property>
+                        <property name="title" translatable="yes">Database type</property>
                       </object>
                     </child>
                     <child>
                       <object class="GtkTreeViewColumn">
-                        <property name="title" translatable="yes">数据库版本</property>
+                        <property name="title" translatable="yes">Database version</property>
                       </object>
                     </child>
                     <child>
@@ -1507,7 +1507,7 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
                         <property name="resizable">True</property>
                         <property name="sizing">fixed</property>
                         <property name="fixed_width">250</property>
-                        <property name="title" translatable="yes">注入类型</property>
+                        <property name="title" translatable="yes">Injection type</property>
                       </object>
                     </child>
                     <child>
@@ -1555,8 +1555,8 @@ along with .  If not, see <http://www.gnu.org/licenses/>.
     <property name="attached_to">main_window</property>
     <property name="program_name">Gui-Acunetix-Api</property>
     <property name="version">0.1</property>
-    <property name="copyright" translatable="yes">三米前有蕉皮</property>
-    <property name="comments" translatable="yes">GTK从零到入门，感谢StackOverflow</property>
+    <property name="copyright" translatable="yes">There is banana peel three meters ago</property>
+    <property name="comments" translatable="yes">GTK from zero to entry, thanks to StackOverflow</property>
     <property name="website">https://kali-team.cn</property>
     <property name="authors">Kali-Team</property>
     <property name="logo">av-64.jpg</property>
