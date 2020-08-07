@@ -1,9 +1,9 @@
 sql_injection_report_template = """
-## 任务ID：{task_id}
-- 验证节点服务器：{api_url}
-- 存在漏洞的URL：{url}; 提交的Data参数：{data}
-- 数据库类型：{dbms}； 数据库版本：{dbms_version}
-- 注入类型：
+## Task ID：{task_id}
+- Verify node server：{api_url}
+- Vulnerable URL：{url}; Data parameters submitted：{data}
+- Database type：{dbms}； Database version：{dbms_version}
+- Injection type：
 ```
 {injection_type}
 ```
