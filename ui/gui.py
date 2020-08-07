@@ -24,7 +24,7 @@ class MainWindow:
 
     def __init__(self):
         self.task_pool = futures.ThreadPoolExecutor(
-            4)  # 多进程:ProcessPoolExecutor
+            4)  # multi-Progress:ProcessPoolExecutor
         self.glade_file = "ui/UI.glade"
         self.builder = Gtk.Builder()
         self.builder.add_from_file(self.glade_file)
@@ -95,7 +95,7 @@ class MainWindow:
         self.window.show()
 
     def on_refresh_target_activate(self, object, data=None):
-        print("刷新目标信息")
+        print("Refresh Target Information")
         self.scan.get_target_info(self.list_store_target)
 
     def on_main_window_destroy(self, object, data=None):
@@ -110,7 +110,7 @@ class MainWindow:
 
     def on_button_single_scan_clicked(self, widget, data=None):
         self.useless_func()
-        print("单个扫描")
+        print("Single scan")
         print(self.edit_singe_scan.get_text())
         address = self.edit_singe_scan.get_text()
         self.task_pool.submit(self.scan.list_to_scan,
@@ -119,7 +119,7 @@ class MainWindow:
 
     def on_button_batch_scan_clicked(self, widget, data=None):
         self.useless_func()
-        print("批量扫描")
+        print("Batch Scan")
         text_buffer = self.Gtk_Text_View.get_buffer()
         text_targets_list = text_buffer.get_text(
             text_buffer.get_start_iter(), text_buffer.get_end_iter(), False)
@@ -139,7 +139,7 @@ class MainWindow:
         return api_host, api_key
 
     def on_batch_del_clicked(self, widget, data=None):
-        print("批量删除")
+        print("Batch deletion")
         model = self.tree_view_target.get_model()
         for row in model:
             print(row[1])
@@ -175,11 +175,11 @@ class MainWindow:
                 None, widget, None, None, event.button, event.time)
 
     def on_refresh_report_activate(self, widget, event=None):
-        print("刷新报告")
+        print("Refresh report")
         self.scan.get_report_info(self.list_store_reports)
 
     def on_report_add_activate(self, widget, event=None):
-        print("添加报告")
+        print("Add report")
         selection = self.tree_view_target.get_selection()
         (model, path_list) = selection.get_selected_rows()
         print(model, path_list)
@@ -198,7 +198,7 @@ class MainWindow:
         self.on_refresh_report_activate(widget)
 
     def on_clear_report_activate(self, widget, data=None):
-        print("批量删除报告")
+        print("Delete reports in bulk")
         model = self.tree_view_reports.get_model()
         for row in model:
             print(row[1])
@@ -320,7 +320,7 @@ class MainWindow:
         self.on_refresh_task_activate(widget)
 
     def on_save_report_clicked(self, widget, event=None):
-        self.File_Choose_Dialog.set_current_name("SQL注入报告.md")
+        self.File_Choose_Dialog.set_current_name("SQL injection report.md")
         responder = self.File_Choose_Dialog.run()
         if responder == Gtk.ResponseType.OK:
             save_file_name = self.File_Choose_Dialog.get_filename()
